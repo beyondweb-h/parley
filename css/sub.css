@@ -37,55 +37,33 @@
 }
 .sub-nav {
   position: relative;
-  flex-shrink: 1;
 }
 .sub-nav-container {
   display: flex;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  padding: 0px 5px;
+  padding: 0px 32px;
   border-radius: 36px;
   background: linear-gradient(to right, #0d1653 0%,#1f4f8b 100%);
-  width: fit-content;
-  margin: 0 auto;
-  height: 35px;
-  box-sizing: border-box;
 }
 .depth1-item {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 0;
-  flex: 0 0 135px; 
-  /* gap: 10px; */
+  background-color: #f00;
 }
-.depth1-item:before {
+.lnb-home:before {
   content: '\e88a';
-  position: absolute;
-  display: flex;
-  align-items: center;
-  left: 10px;
-  line-height: 1;
   font-family: var(--google-icon);
   color: var(--white-color);
   font-size: var(--font-size-s-mo);
 }
 .lnb-btn {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-left: 40px;
   font-size: var(--font-size-xs-mo);
   font-weight: 600;
   color: var(--white-color);
   text-decoration: none;
   border-radius: 16px;
   background: transparent;
-  box-sizing: border-box;
   line-height: 1;
   white-space: nowrap;
 }
@@ -93,11 +71,7 @@
 .depth1-lnb-btn:after {
   content: '\e313';
   font-family: var(--google-icon);
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  vertical-align: middle; /* 텍스트와 라인 맞춤 */
+  
 }
 .depth1-dropdown, .depth2-dropdown {
   position: absolute;
@@ -106,7 +80,6 @@
   min-width: 80px;
   padding: 10px;
   border-radius: 12px;
-  box-sizing: border-box;
   z-index: 20;
   font-size: var(--font-size-xxs-mo);
   font-weight: 600;
@@ -118,7 +91,6 @@
 }
 .depth1-item.active .depth1-dropdown,
 .depth2-item.active .depth2-dropdown {
-  height: auto;
   opacity: 1;
   visibility: visible;
   /* transform: translateY(0); */
@@ -150,9 +122,8 @@
   transition: var(--speed);
 }
 .depth2-item {
+  background-color: #00f;
   position: relative;
-  width: 110px;
-  flex: 0 0 110px; 
   align-items: center;
   justify-content: center;
   /* display: inline-flex; */
