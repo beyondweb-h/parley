@@ -1,0 +1,186 @@
+@charset 'utf-8';
+/* 1. 웹폰트 연결 */
+@import url('webfonts.css');
+/* 헤더 비주얼 */
+.sub-hd {
+  /* min-height: 100vh; */
+}
+.sub-hd-visual {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.sub-hd-visual img{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+/* 서브 메뉴 */
+.sub-hd-lnb {
+  padding: 60px 20px;
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: column;
+  /* justify-content: space-between; */ /* 타이틀은 왼쪽, 메뉴는 오른쪽 */
+  /* gap: 20px; */
+}
+.sub-title {
+  white-space: nowrap;
+  font-size: var(--font-size-m-mo);
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+}
+.sub-nav {
+  position: relative;
+  flex-shrink: 1;
+}
+.sub-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0px 5px;
+  border-radius: 36px;
+  background: linear-gradient(to right, #0d1653 0%,#1f4f8b 100%);
+  width: fit-content;
+  margin: 0 auto;
+  height: 35px;
+  box-sizing: border-box;
+}
+.depth1-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  flex: 0 0 135px; 
+  /* gap: 10px; */
+}
+.depth1-item:before {
+  content: '\e88a';
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 10px;
+  line-height: 1;
+  font-family: var(--google-icon);
+  color: var(--white-color);
+  font-size: var(--font-size-s-mo);
+}
+.lnb-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 40px;
+  font-size: var(--font-size-xs-mo);
+  font-weight: 600;
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 16px;
+  background: transparent;
+  box-sizing: border-box;
+  line-height: 1;
+  white-space: nowrap;
+}
+.depth1-lnb-btn {}
+.depth1-lnb-btn:after {
+  content: '\e313';
+  font-family: var(--google-icon);
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle; /* 텍스트와 라인 맞춤 */
+}
+.depth1-dropdown, .depth2-dropdown {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  min-width: 80px;
+  padding: 10px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  z-index: 20;
+  font-size: var(--font-size-xxs-mo);
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--speed) ease-in-out, visibility var(--speed) ease-in-out;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.depth1-item.active .depth1-dropdown,
+.depth2-item.active .depth2-dropdown {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  /* transform: translateY(0); */
+  pointer-events: auto;
+}
+.depth1-item:after, .depth2-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 20px;
+}
+.depth1-dropdown {
+  width: 100px;
+  top: calc(100% + 15px);
+  left: 55%;
+  text-align: center;
+  background: linear-gradient(to right, #10205D 0%,#142C69 100%);
+}
+.depth1-list {}
+.depth1-list li {}
+.depth1-list a {
+  color: var(--white-color);
+  opacity: 0.7;
+}
+.depth1-list a:hover {
+  opacity: 1;
+  transition: var(--speed);
+}
+.depth2-item {
+  position: relative;
+  width: 110px;
+  flex: 0 0 110px; 
+  align-items: center;
+  justify-content: center;
+  /* display: inline-flex; */
+}
+.depth2-lnb-btn {
+  padding-left: 0;
+  padding-right: 10px;
+}
+.depth2-lnb-btn:after {
+  content: '\e313';
+  font-family: var(--google-icon);
+  margin-left: 5px;
+}
+.depth2-dropdown {
+  width: 130px;
+  top: calc(100% + 15px);
+  left: calc(100% - 65px);
+  text-align: center;
+  background: linear-gradient(to right, #163370 0%,#1F4F8B 100%);
+}
+.depth2-list {}
+.depth2-list li {}
+.depth2-list a {
+  color: var(--white-color);
+  opacity: 0.7;
+}
+.depth2-list a:hover {
+  opacity: 1;
+  transition: var(--speed);
+}
+

@@ -1,0 +1,120 @@
+@charset 'utf-8';
+/* 1. 웹폰트 연결 */
+@import url('webfonts.css');
+
+/* esg 1번 영역 */
+.sub-section-one {}
+.one-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.one-title {
+  width: 100%;
+  min-width: 380px;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+}
+.one-desc {
+  width: 100%;
+  min-width: 380px;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* Circular */
+.sub-circular-two {
+  margin: 0 20px;
+  padding-bottom: 60px;
+}
+.sub-circular-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.circular-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 중앙 원형 이미지 */
+.circle-center {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  padding: 13px;
+  overflow: hidden;
+  border: 1px dashed var(--primary-font-color);
+  margin: 0 auto 28px;
+}
+
+.circle-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 아이템 공통 */
+.circular-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  transform-origin: left center;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.circular-item:last-child {
+  border-bottom: none;
+}
+.circular-item.active {
+  transform: scale(1.1);
+}
+.circle {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 텍스트 */
+.circular-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.circular-title-en {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.1;
+}
+.circular-title-ko {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+.circular-desc {
+  margin-top: 6px;
+  width: 90%;
+  font-size: 0.8em;
+  line-height: 1.6;
+}

@@ -1,0 +1,443 @@
+@charset 'utf-8';
+/* 기본, 모바일 우선 */
+
+/* 1. mo tiny */
+@media screen and (max-width: 360px) {
+  #pl-vision-main {
+    min-width: 360px;
+  }
+  /* 메인2 */
+  .card-subject {
+    font-size: var(--font-size-s-mo);
+  }
+  .card-desc {
+    font-size: var(--font-size-xxs-mo);
+  }
+  /* 메인5 */
+  /* .ceo-quote-box {
+    padding: 0;
+    top: 50%;
+    right: 3%;
+  }
+  .ceo-text {
+    font-size: 10px;
+  }
+  .ceo-name {
+    font-size: 8px;
+  } */
+}
+/* 1-1 */
+@media screen and (max-width: 520px) {
+  /* .ceo-text {
+    font-size: 12px;
+  }
+  .ceo-name {
+    font-size: 10px;
+  }  */
+}
+/* 2. mo */
+@media screen and (max-width: 767px) {}
+
+/* 3. tb~ */
+@media screen and (min-width: 768px) {
+  /* 메인1 */
+  .vision-overview-sec {
+    padding: 40px 20px 80px;
+  }
+  .visiontitle {
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  .visiontitle .title-text {
+    font-size: 34px;
+  }
+  .vision-title img {
+    width: 100px;
+    height: 100px;
+  }
+  .overview-desc-list {
+    margin-bottom: 40px;
+  }
+  .overview-desc-list li {
+    font-size: var(--font-size-xs-pc);
+  }
+  .overview-card-list{
+    flex-direction: row;
+    gap: 10px; /* 카드 사이 간격 */
+  }
+  .overview-card-item {
+    max-width: 300px;
+    padding: 10px;
+  }
+  .overview-card-item:nth-child(1):before,
+  .overview-card-item:nth-child(2):before,
+  .overview-card-item:nth-child(3):before {
+    font-size: 40px;
+  }
+  .card-value {
+    font-size: 24px;
+  }
+  .card-txt {
+    font-size: 20px;
+  }
+
+  /* 메인2 */
+  .vision-strategy-sec {
+    padding: 80px 40px; 
+  }
+  .strategy-inner {
+    gap: 40px;
+  }
+  .strategy-title {
+    font-size: 30px;
+    text-align: left;
+  }
+  .strategy-card-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .strategy-card-item {
+    height: 400px;
+  }
+  .strategy-card-txt {
+    padding: 40px 20px;
+  }
+  .card-subject {
+    font-size: 1.7em;
+  }
+  .card-desc {
+    font-size: 1em;
+  }
+
+  /* 메인3 */
+  .vision-history-sec {
+    padding: 80px 20px 60px;
+  }
+  .history-inner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2vw;
+  }
+  .history-intro {
+    flex: 1;
+    max-width: 500px;
+    min-width: 0;
+    text-align: left;
+    /* padding-left: 30px; */
+  }
+  .history-title {
+    font-size: var(--font-size-m-pc);
+  }
+  .title-text {
+    font-size: 28px;
+  }
+  .history-desc {
+    font-size: 17px;
+  }
+  .history-desc br {
+    display: inline;
+  }
+  .history-img-box {
+    flex: 0.9;
+    max-width: 600px;
+    min-width: 0;
+  }
+  .img-item-main {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%; /* 전체 박스에서 메인 사진이 차지할 비율 */
+    z-index: 2;
+  }
+  .img-item-sub {
+    position: relative;
+    margin-top: -15%;
+    margin-left: 30%;
+    width: 70%;  /* 메인 사진 대비 상대적 크기 */
+    z-index: 1;
+  }
+
+  /* 메인4 */
+  .vision-collabo-sec {
+    padding: 60px 20px 80px;
+  } 
+  .collabo-inner {
+    gap: 30px;
+  }
+  /* 로고 그리드 */
+  .vision-collabo-grid {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+  }
+  .collabo-logo-list li {
+    padding: 5px;
+    border-radius: 12px;
+    aspect-ratio: 1.4 / 1;
+  }
+  .collabo-logo-list img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+  /* 메인4 - 오른쪽 텍스트 */
+  .collabo-intro {
+    flex: 0 0 auto;
+    width: 100%;
+    /* max-width: 00px; */
+    text-align: left;
+    margin: 0;
+  }
+  .collabo-title {
+    font-size: var(--font-size-m-pc);
+    text-align: left;
+  }
+  .collabo-text {
+    font-size: 28px;
+    text-align: left;
+  }
+  .collabo-desc {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* 메인5 */
+  /* 메인5 - ceo 텍스트 */
+  .ceo-inner {
+    height: 700px;
+  }
+  .ceo-quote-box {
+    padding: 0;
+    /* padding: 60px 20px; */
+    top: 76%;
+    right: 3%;
+    width: 100%;
+    max-width: none;
+    text-align: right;
+  }
+  .ceo-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    letter-spacing: normal;
+  }
+  .ceo-text-ko {
+    width: 500px;
+    font-size: 0.9em;
+  }
+  .ceo-name {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .ceo-info {
+  }
+}
+
+/* 4. only tb */
+@media screen and (min-width: 768px) and (max-width: 1279px) {} 
+
+/* 5.laptop 1280~ */
+@media screen and (min-width: 1280px) {
+  .vision-overview-sec {
+    padding: 0 36px 100px;
+  }
+  .vision-title {
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  .vision-title .title-text {
+    font-size: var(--font-size-l-pc-ko);
+  }
+  .vision-title img {
+    width: 150px;
+    height: 100px;
+  }
+  .overview-desc-list li {
+    font-size: var(--font-size-xs-pc);
+  }
+  .overview-card-list{
+    gap: 100px; /* 카드 사이 간격 */
+    padding: 60px 0 0;
+  }
+  .overview-card-item {
+    max-width: 400px;
+    padding: 10px;
+  }
+  .overview-card-item:nth-child(1):before,
+  .overview-card-item:nth-child(2):before,
+  .overview-card-item:nth-child(3):before {
+    font-size: 50px;
+  }
+  .card-value {
+    font-size: 36px;
+  }
+  .card-txt {
+    font-size: 22px;
+  }
+
+  /* 메인2 */
+  .vision-strategy-sec {
+    padding: 100px 60px; 
+  }
+  .strategy-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    gap: 60px;
+  }
+  .strategy-title {
+    font-size: var(--font-size-m-pc);
+    line-height: 1.6;
+  }
+  .strategy-title br {
+    display: inline;
+  }
+  .strategy-card-list {
+    gap: 40px;
+  }
+  .strategy-card-item {
+    height: 500px;
+  }
+  .strategy-card-txt {
+    padding: 60px 20px;
+    text-align-last: left;
+  }
+  .card-subject {
+    font-size: 32px;
+  }
+  .card-desc {
+    font-size: var(--font-size-xs-pc);
+  }
+
+  /* 메인3 */
+  .vision-history-sec {
+    padding: 100px 36px 60px;
+  }
+  .history-inner {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 3vw;
+  }
+  .history-intro {
+    flex: 1;
+    max-width: 600px;
+    min-height: 300;
+    text-align: left;
+    /* padding-left: 60px; */
+  }
+  .history-title {
+    font-size: var(--font-size-l-pc);
+  }
+  .title-text {
+    font-size: 32px;
+  }
+  .history-desc {
+    font-size: var(--font-size-xs-pc);
+    margin-bottom: 0;
+  }
+  .history-img-box {
+    flex: 1.1;
+    max-width: 800px; /* PC에서 적절한 이미지 전체 폭 */
+    min-width: 350px;
+  }
+  .img-item-main {
+    width: 70%; /* 전체 박스에서 메인 사진이 차지할 비율 */
+  }
+  .img-item-sub {
+    margin-top: -15%;
+    margin-left: 30%;
+    width: 70%;  /* 메인 사진 대비 상대적 크기 */
+  }
+
+  /* 메인4 */
+  .vision-collabo-sec {
+    padding: 60px 36px 100px;
+  }
+  .collabo-inner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8vw; /* 로고와 텍스트 사이 여백 */
+  }
+  /* 로고 그리드 */
+  .vision-collabo-grid {
+    /* flex: 0 0 800px; */ /* 로고 영역 너비? */
+    flex: 1;
+    max-width: 800px;
+    min-width: 0;
+    width: 100%;
+  }
+  .collabo-logo-list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  .collabo-logo-list li {
+    padding: 10px;
+    border-radius: 16px;
+    aspect-ratio: 1.4 / 1;
+  }
+  .collabo-logo-list img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  /* 메인4 - 텍스트 */
+  .collabo-intro {
+    flex: 0 1 500px;
+    max-width: 500px;
+    min-width: 0;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .collabo-title {
+    font-size: var(--font-size-l-pc);
+    text-align: left;
+  }
+  .collabo-text {
+    font-size: 32px;
+    text-align: left;
+  }
+  .collabo-desc {
+    font-size: var(--font-size-xs-pc);
+    text-align: left;
+  }
+  .collabo-desc br {
+    display: inline;
+  }
+
+  /* 메인5 */
+  /* 메인5 - 백그라운드 이미지 */
+  .ceo-inner {
+    position: relative;
+    display: block;
+    height: 900px;
+  }
+  /* 메인5 - ceo 텍스트 */
+  .ceo-quote-box {
+    max-width: 1000px;
+    text-align: right;
+    right: 3%;
+    padding: 0;
+  }
+  .ceo-text {
+    font-size: 1.7em;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .ceo-text-ko {
+    width: 700px;
+    font-size: 1.1em;
+  }
+  .ceo-name {
+    font-size: 1.5em;
+  }
+}
+
+/* 6.laptop 1440~ */
+@media screen and (min-width: 1440px) {}
+
+/* 7.laptop 1921~ */
+@media screen and (min-width: 1921px) {}

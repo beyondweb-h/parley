@@ -1,0 +1,294 @@
+@charset 'utf-8';
+/* 1. 웹폰트 연결 */
+@import url('webfonts.css');
+
+/* esg 1번 영역 */
+.sub-section-one {}
+.one-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.one-title {
+  width: 100%;
+  min-width: 380px;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+}
+.one-desc {
+  width: 100%;
+  min-width: 380px;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* esg 2번 영역 */
+.sub-section-two {
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.two-wrap {
+  position: relative;
+  height: 100%;
+}
+.two-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.two-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+.two-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+.two-content {
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+.two-title {
+  width: 100%;
+  text-align: left;
+  margin-top: 60px;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.two-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.two-imgs-wrap {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.img-box {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.two-stats {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+.two-stats li {
+  width: 100%;
+}
+.two-stats span {
+  font-size: 1em;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.two-stats p {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: #fff;
+}
+.two-caption {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.7em;
+  color: #fff;
+}
+
+/* esg 3번 영역 */
+.sub-section-three {}
+.three-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+.three-left {
+  width: 100%;
+  margin: 60px 0; 
+}
+.three-img-box {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.three-left img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+.three-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.three-title {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5em;
+}
+.three-desc {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-size: 1em;
+  line-height: 1.5;
+  gap: 10px;
+}
+.three-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+.three-stats li {
+  width: 100%;
+}
+.three-stats span {
+  font-weight: 600;
+  font-size: 1em;
+}
+.three-stats p {
+  font-size: 2.2em;
+  font-weight: 800;
+  line-height: 1;
+  color: #279982;
+}
+.three-caption {
+  width: 100%;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.7em;
+}
+
+
+/* Circular */
+.sub-circular-two {
+  margin: 0 20px;
+  padding-bottom: 60px;
+}
+.sub-circular-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.circular-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 중앙 원형 이미지 */
+.circle-center {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  padding: 13px;
+  overflow: hidden;
+  border: 1px dashed var(--primary-font-color);
+  margin: 0 auto 28px;
+}
+
+.circle-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 아이템 공통 */
+.circular-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.3s ease-in; /* cubic-bezier(0.34, 1.56, 0.64, 1) */
+}
+.circular-item:last-child {
+  border-bottom: none;
+}
+.circular-item:hover {
+  transform: scale(1.05);
+}
+.circle {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 텍스트 */
+.circular-text {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+.circular-title-en {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.1;
+}
+.circular-title-ko {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+.circular-desc {
+  margin-top: 6px;
+  width: 90%;
+  font-size: 0.8em;
+  line-height: 1.6;
+}

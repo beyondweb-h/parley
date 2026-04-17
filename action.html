@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parley - For the Oceans</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/png">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/common_rwd.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/sub_rwd.css">
+  <link rel="stylesheet" href="css/action.css">
+  <link rel="stylesheet" href="css/action_rwd.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/sub.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      function setAOS() {
+        const isMobile = window.innerWidth <= 768;
+        const items = document.querySelectorAll('.content-wrapper');
+
+        items.forEach((el) => {
+          if (isMobile) {
+            el.setAttribute('data-aos', 'fade-left');
+          } else {
+            if (el.closest('.left-item')) {
+              el.setAttribute('data-aos', 'fade-left');
+            } else {
+              el.setAttribute('data-aos', 'fade-right');
+            }
+          }
+        });
+      }
+
+      // 먼저 방향 설정
+      setAOS();
+
+      // AOS 실행
+      AOS.init({
+        disableMutationObserver: true
+      });
+
+
+      // 리사이즈 대응
+      window.addEventListener('resize', function () {
+        setAOS();
+        AOS.refreshHard();
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  <!-- 상단 메뉴 -->
+  <header id="pl-hd" class="wh">
+    <div class="hd-container wrap">
+      <h1 class="logo"><a href="index.html"><img src="./images/logo/parlry_logo_wh.svg" alt="로고"><span class="blind">팔리 로고</span></a></h1>
+      <nav id="pl-gnb">
+        <h2 class="blind">주메뉴</h2>
+        <ol class="pl-gnb">
+          <li class="depth1">
+            <a href="about.html">About</a>
+            <div class="depth2-wrap">
+              <ul class="depth2">
+                <li><a href="about.html">Our Vision</a></li>
+                <li><a href="about.html">A.I.R Strategy</a></li>
+              </ul>  
+            </div>
+          </li>
+          <li class="depth1">
+            <a href="action.html">Action</a>
+            <div class="depth2-wrap">          
+              <ul class="depth2">
+                <li><a href="action.html">Cleanup</a></li>
+                <li><a href="action.html">Get Involved</a></li>
+                <li><a href="action.html">Education</a></li>  
+              </ul>    
+            </div>          
+          </li>
+          <li class="depth1">
+            <a href="esg_r.html">ESG</a>
+            <div class="depth2-wrap">    
+              <ul class="depth2">
+                <li><a href="esg_r.html">Report</a></li>
+                <li><a href="esg_c.html">Circular</a></li>
+                <li><a href="esg_r.html">Transparency</a></li>
+              </ul>
+            </div>                             
+          </li>
+          <li class="depth1">
+            <a href="partner.html">Partner</a>
+            <div class="depth2-wrap">
+              <ul class="depth2">
+                <li><a href="partner.html">Partners</a></li>
+                <li><a href="#">Collaboration</a></li>
+              </ul>
+            </div>           
+          </li>
+        </ol>
+      </nav>
+      <!-- 유틸메뉴 -->
+      <nav class="util-menu">
+        <div class="lang-wrap">
+          <button class="btn-lang"><span class="blind">언어선택</span></button>
+          <div class="lang-list">
+            <a href="#">KO</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+        <button class="btn-sitemap"><span class="blind">사이트맵</span></button>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- 서브헤더와 비주얼  -->
+  <header class="sub-hd">
+    <div class="sub-hd-visual"> <!--서브 헤더 비주얼-->
+      <img src="./images/action/news5.jpg" alt="">
+      <h2 class="visual-title"><span class="blind">PARLEY 비주얼 이미지</span></h2>
+    </div>
+
+    <section class="sub-hd-lnb wrap">
+      <h2 class="sub-title">ACTION</h2>
+      <nav class="sub-nav">
+        <div class="sub-nav-container">
+
+          <!-- depth1 -->
+          <div class="depth1-item">
+            <a href="action.html" class="lnb-btn depth1-lnb-btn">ACTION</a>
+            <div class="depth1-dropdown">
+              <ul class="depth1-list">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="action.html" class="active">ACTION</a></li>
+                <li><a href="esg_r.html">ESG</a></li>
+                <li><a href="partner.html">PARTNER</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- depth2 -->
+          <div class="depth2-item">
+            <a href="action.html" class="lnb-btn depth2-lnb-btn">CLEAN UP</a>
+            <div class="depth2-dropdown">
+              <ul class="depth2-list">
+                <li><a href="action.html" class="active">CLEAN UP</a></li>
+                <li><a href="#">GET INVOLVED</a></li>
+                <li><a href="#">EDUCATION</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </nav>
+    </section>
+  </header>
+
+  <!-- 메인영역 -->
+  <main id="pl-action-main">
+    <div class="action-container">
+      <section class="timeline-section">
+        
+        <div class="timeline-central-line"></div>
+
+        <div class="timeline-list">
+
+          <div class="timeline-item right-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
+              <div class="text-block">
+                <span class="year-label">2017</span>
+                <span class="campaign-title">Ongoing Campaign</span>
+                <p class="campaign-desc">
+                  전 세계 수백만 명이 참여하는 글로벌 러닝 캠페인으로,<br>
+                  달린 거리만큼 해양 플라스틱 정화 활동이 지원됩니다.<br>
+                  Parley의 대표 참여형 프로젝트입니다.</p>
+              </div>
+              <div class="image-block">
+                <span class="image-title">Run For The Oceans</span>
+                <div class="img-wrap"><img src="/images/action/rfto.jpg" alt="Run For The Oceans"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item left-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-left" data-aos-duration="400" data-aos-delay="300">
+              <div class="image-block">
+                <span class="image-title">adidas x Parley</span>
+                <div class="img-wrap"><img src="/images/action/adidasxparley.jpg" alt="adidas x Parley"></div>
+              </div>
+              <div class="text-block">
+                <span class="year-label">2015</span>
+                <h3 class="campaign-title">Ongoing Collaboration</h3>
+                <p class="campaign-desc">
+                  해양 플라스틱을 활용한 신발 및 의류 개발을 통해<br>
+                  지속가능 소재를 대중화한 대표 협업 프로젝트입니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
+              <div class="text-block">
+                <span class="year-label">2014</span>
+                <h3 class="campaign-title">Ongoing Innovation</h3>
+                <p class="campaign-desc">
+                  해양 폐플라스틱을 고기능성 원사로 재가공하는<br>
+                  소재 혁신 프로젝트로, 다양한 산업에 적용되고 있습니다.</p>
+              </div>
+              <div class="image-block">
+                <span class="image-title">Parley Ocean Plastic™</span>
+                <div class="img-wrap"><img src="/images/action/parley_ocean_plastic2.jpg" alt="Parley Ocean Plastic"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item left-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-left" data-aos-duration="400" data-aos-delay="300">
+              <div class="image-block">
+                <span class="image-title">Global Cleanup Network</span>
+                <div class="img-wrap"><img src="/images/action/Global_Cleanup_Network2.jpg" alt="Global Cleanup Network"></div>
+              </div>
+              <div class="text-block">
+                <span class="year-label">2015</span>
+                <h3 class="campaign-title">Ongoing Initiative</h3>
+                <p class="campaign-desc">
+                  전 세계 해변과 해안에서 플라스틱을 수거하며,<br>
+                  해양 유입을 사전에 차단하는 글로벌 정화 시스템입니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
+              <div class="text-block">
+                <span class="year-label">2016</span>
+                <h3 class="campaign-title">Ongoing Framework</h3>
+                <p class="campaign-desc">
+                  Avoid, Intercept, Redesign의 3단계 전략으로<br>
+                  플라스틱 문제를 구조적으로 해결하는 핵심 접근 방식입니다.</p>
+              </div>
+              <div class="image-block">
+                <span class="image-title">AIR Strategy</span>
+                <div class="img-wrap"><img src="/images/action/air_strategy.jpg" alt="AIR Strategy"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item left-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-left" data-aos-duration="400" data-aos-delay="300">
+              <div class="image-block">
+                <span class="image-title">Maldives Project</span>
+                <div class="img-wrap"><img src="/images/action/maldives_project.jpg" alt="Maldives Project"></div>
+              </div>
+              <div class="text-block">
+                <span class="year-label">2013 — 2016</span>
+                <h3 class="campaign-title">Completed Project</h3>
+                <p class="campaign-desc">
+                  몰디브 정부와 협력하여 해양 플라스틱 문제 해결 및<br>
+                  친환경 인프라 구축을 진행한 초기 핵심 프로젝트입니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
+              <div class="text-block">
+                <span class="year-label">2012 — 2018</span>
+                <h3 class="campaign-title">Completed Program</h3>
+                <p class="campaign-desc">
+                  아트 바젤에서 시작된 글로벌 토크 시리즈로,<br>
+                  환경·예술·산업 리더들이 모여 해양 문제 해결을 논의한 플랫폼입니다.</p>
+              </div>
+              <div class="image-block">
+                <span class="image-title">Parley Talks (Art Basel)</span>
+                <div class="img-wrap"><img src="/images/action/art_basel.jpg" alt="Parley Talks"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item left-item">
+            <div class="item-dot"></div>
+            <div class="content-wrapper" data-aos="fade-left" data-aos-duration="400" data-aos-delay="300">
+              <div class="image-block">
+                <span class="image-title">G-Star RAW x Parley</span>
+                <div class="img-wrap"><img src="/images/action/g-star_raw.jpg" alt="G-Star RAW"></div>
+              </div>
+              <div class="text-block">
+                <span class="year-label">2014 — 2018</span>
+                <h3 class="campaign-title">Completed Collaboration</h3>
+                <p class="campaign-desc">
+                  데님 브랜드 G-Star RAW와 협업하여<br>
+                  해양 플라스틱을 활용한 컬렉션을 선보이며<br>
+                  지속가능 패션의 가능성을 확장했습니다.</p>
+              </div>
+            </div>
+          </div>
+
+        </div> </section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer id="pl-ft" class="wh">
+    <div class="pl-ft-container">
+      <!-- 푸터 상단 -->
+      <div class="ft-top">
+        <h2 class="ft-logo"><img src="./images/logo/parlry_logo_wh.svg" alt="로고"><span class="blind">팔리 로고</span></h2>
+        <div class="ft-top-right">
+          <p>기부금 전액은 Parley의 환경 보호 활동,<br>교육 및 홍보 캠페인에 직접 사용됩니다.</p>
+          <div class="ft-top-btn">
+            <a href="https://parley.tv/donations">DONATE</a>
+            <a href="https://shop.parley.tv/">SHOP</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 푸터 하단 -->
+      <div class="ft-bottom">
+        <div class="ft-sitemap"> <!-- 하단 왼쪽 -->
+          <ol>
+            <li class="ft-depth1">
+              <a href="about.html">About</a>
+              <div class="ft-depth2-wrap">
+                <ul class="ft-depth2">
+                  <li><a href="about.html">Our Vision</a></li>
+                  <li><a href="#">A.I.R Strategy</a></li>
+                </ul>  
+              </div>
+            </li>
+            <li class="ft-depth1">
+              <a href="action.html">Action</a>
+              <div class="ft-depth2-wrap">          
+                <ul class="ft-depth2">
+                  <li><a href="action.html">Cleanup</a></li>
+                  <li><a href="#">Get Involved</a></li>
+                  <li><a href="#">Education</a></li>  
+                </ul>    
+              </div>          
+            </li>
+            <li class="ft-depth1">
+              <a href="esg_r.html">ESG</a>
+              <div class="ft-depth2-wrap">    
+                <ul class="ft-depth2">
+                  <li><a href="esg_r.html">Report</a></li>
+                  <li><a href="esg_c.html">Circular</a></li>
+                  <li><a href="#">Transparency</a></li>
+                </ul>
+              </div>                             
+            </li>
+            <li class="ft-depth1">
+              <a href="partner.html">Partner</a>
+              <div class="ft-depth2-wrap">
+                <ul class="ft-depth2">
+                  <li><a href="partner.html">Partners</a></li>
+                  <li><a href="#">Collaboration</a></li>
+                </ul>
+              </div>           
+            </li>
+          </ol>                  
+        </div>       
+        <div class="ft-info"> <!-- 하단 오른쪽 -->
+          <dl class="ft-location">
+            <dt>Location</dt>
+            <dd><a href="#"><i class="fa-solid fa-location-dot"></i>187 Lafayette Street, Floor 5 New York, NY 10013</a></dd>
+          </dl>
+          <dl class="ft-sns">
+            <dt>Social</dt>
+            <dd class="ft-sns-insta"><a href="https://www.instagram.com/parley.tv"><i class="fa-brands fa-instagram"></i><span class="blind">인스타그램</span></a></dd>
+            <dd class="ft-sns-youtube"><a href="https://www.youtube.com/channel/UCieB62vq-5QByMIcq-LMntg"><i class="fa-brands fa-youtube"></i><span class="blind">유튜브</span></a></dd>
+            <dd class="ft-sns-tiktok"><a href="https://www.tiktok.com/@parleyfortheoceans?lang=en"><i class="fa-brands fa-tiktok"></i><span class="blind">틱톡</span></a></dd>
+            <dd class="ft-sns-twitter"><a href="https://x.com/parleyforoceans"><i class="fa-brands fa-x-twitter"></i><span class="blind">트위터</span></a></dd>         
+          </dl>
+        </div>  
+      </div>
+      <div class="copy">&copy; 2026 Parley All rights reserved</div>         
+    </div>
+  </footer>
+  <!--footer end-->
+
+  <!-- sitemap -->
+  <nav class="pl-sitemap blur-background">
+    <h1 class="sitemap-logo"><a href="index.html"><img src="./images/logo/parlry_logo_wh.svg" alt="로고"><span class="blind">팔리 로고</span></a></h1>
+    <button class="close-btn icon-btn"><span class="blind">닫기</span></button>
+    <ol class="sm-mo-gnb">
+        <li class="sm-depth1">
+          <a href="about.html">About</a>
+          <ul class="sm-depth2">
+            <li><a href="about.html">Our vision</a></li>
+            <li><a href="#">A.I.R Strategy</a></li>
+          </ul>
+        </li>
+        <li class="sm-depth1">
+          <a href="action.html">Action</a>
+          <ul class="sm-depth2">
+            <li><a href="action.html">Clean up</a></li>
+            <li><a href="#">Get Involved</a></li>
+            <li><a href="#">Education</a></li>
+          </ul>
+        </li>
+        <li class="sm-depth1">
+          <a href="esg_r.html">ESG</a>
+          <ul class="sm-depth2">
+            <li><a href="esg_r.html">Report</a></li>
+            <li><a href="esg_c.html">Circular</a></li>
+            <li><a href="#">Transparency</a></li>
+          </ul>
+        </li>
+        <li class="sm-depth1">
+          <a href="partner.html">Partner</a>
+          <ul class="sm-depth2">
+            <li><a href="partner.html">Partners</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </li>
+        <li class="sm-depth1 last">
+          <span class="sound-only">팔리로고</span>
+        </li>
+    </ol>
+  </nav>
+  <!-- sitemap end-->
+
+</body>
+</html>
