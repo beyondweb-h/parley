@@ -262,17 +262,12 @@
 }
 /* 로고 그리드 */
 .vision-collabo-grid {
-  /* flex: 0 0 800px; */ /* 로고 영역 너비? */
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 600px;
-  min-width: unset;
+
 }
 .collabo-logo-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  list-style: none;
+
 }
 .collabo-logo-list li {
   display: flex;

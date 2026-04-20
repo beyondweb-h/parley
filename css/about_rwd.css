@@ -357,40 +357,33 @@
     padding: 60px 36px 100px;
   }
   .collabo-inner {
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 8vw; /* 로고와 텍스트 사이 여백 */
+    gap: 8vw;  */
   }
   /* 로고 그리드 */
-  .vision-collabo-grid {
-    /* flex: 0 0 800px; */ /* 로고 영역 너비? */
+  /* .vision-collabo-grid {
+    flex: 0 0 800px; 
     flex: 1;
     max-width: 800px;
     min-width: 0;
     width: 100%;
-  }
+  } */
   .collabo-logo-list {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
   }
   .collabo-logo-list li {
-    padding: 10px;
-    border-radius: 16px;
-    aspect-ratio: 1.4 / 1;
+
   }
   .collabo-logo-list img {
-    max-width: 80%;
-    max-height: 80%;
+
   }
   /* 메인4 - 텍스트 */
   .collabo-intro {
-    flex: 0 1 500px;
-    max-width: 500px;
-    min-width: 0;
-    text-align: left;
-    margin-bottom: 0;
+
   }
   .collabo-title {
     font-size: var(--font-size-l-pc);
